@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
@@ -22,6 +22,8 @@ build:
   skip: True  # [win and py<35]
 
 # Numpy version requirement copied from conda-forge h5py feedstock
+# Pinning GSL to 1.16 for compatability with bioconda. No packages 
+# for Windows at 1.16, so taking whatever is available in 2.x.
 requirements:
   build:
     - python
@@ -33,8 +35,8 @@ requirements:
     - numpy 1.9.*   # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - hdf5
-    - gsl 
-    - openblas  # [not win]
+    - gsl         # [win]
+    - gsl ==1.16  # [not win]
   run:
     - python
     - svgwrite
@@ -43,8 +45,8 @@ requirements:
     - numpy >=1.9   # [win and py35]
     - numpy >=1.11  # [win and py36]
     - hdf5
-    - gsl 
-    - openblas  # [not win]
+    - gsl         # [win]
+    - gsl ==1.16  # [not win]
 
 test:
   imports:
