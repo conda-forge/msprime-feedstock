@@ -34,6 +34,7 @@ requirements:
     - numpy 1.11.*  # [win and py36]
     - hdf5
     - gsl 
+    - openblas  # [not win]
   run:
     - python
     - svgwrite
@@ -43,6 +44,7 @@ requirements:
     - numpy >=1.11  # [win and py36]
     - hdf5
     - gsl 
+    - openblas  # [not win]
 
 test:
   imports:
