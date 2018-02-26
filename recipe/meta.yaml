@@ -1,8 +1,8 @@
 {% set name = "msprime" %}
-{% set version = "0.5.0b2" %}
+{% set version = "0.5.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "5cf78da4c27669d3980d86861cbcdb67ee3ead56d94206e52bc7e0b208b276d9" %}
+{% set hash_value = "e1ad0392608f23a66f2192bd052d161fb507aaaa85af5ae4bdd50504ef9b4fa7" %}
 
 package:
   name: '{{ name|lower }}'
@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
