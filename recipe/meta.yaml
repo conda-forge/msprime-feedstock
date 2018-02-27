@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
@@ -24,6 +24,8 @@ build:
 # Numpy version requirement copied from conda-forge h5py feedstock
 # Pinning GSL to 1.16 for compatability with bioconda. No packages 
 # for Windows at 1.16, so taking whatever is available in 2.x.
+# Pinning hdf5 to the version specified in 
+# https://github.com/conda-forge/conda-forge.github.io/blob/master/scripts/pin_the_slow_way.py
 requirements:
   build:
     - python
@@ -34,7 +36,7 @@ requirements:
     - numpy 1.8.*   # [not (win and (py35 or py36))]
     - numpy 1.9.*   # [win and py35]
     - numpy 1.11.*  # [win and py36]
-    - hdf5
+    - hdf5 1.10.1
     - gsl         # [win]
     - gsl ==1.16  # [not win]
   run:
@@ -44,7 +46,7 @@ requirements:
     - numpy >=1.8   # [not (win and (py35 or py36))]
     - numpy >=1.9   # [win and py35]
     - numpy >=1.11  # [win and py36]
-    - hdf5
+    - hdf5 1.10.1
     - gsl         # [win]
     - gsl ==1.16  # [not win]
 
