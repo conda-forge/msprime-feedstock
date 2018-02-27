@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
@@ -47,6 +47,7 @@ requirements:
     - numpy >=1.9   # [win and py35]
     - numpy >=1.11  # [win and py36]
     - hdf5 1.10.1
+    - h5py
     - gsl         # [win]
     - gsl ==1.16  # [not win]
 
