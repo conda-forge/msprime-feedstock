@@ -22,7 +22,7 @@ build:
   skip: True  # [win and py<35]
 
 # Numpy version requirement copied from conda-forge h5py feedstock
-# Pinning GSL to 1.16 for compatability with bioconda. No packages 
+# Pinning GSL to 2.2.1 for compatability with bioconda. No packages 
 # for Windows at 1.16, so taking whatever is available in 2.x.
 # Pinning hdf5 to the version specified in 
 # https://github.com/conda-forge/conda-forge.github.io/blob/master/scripts/pin_the_slow_way.py
@@ -38,7 +38,7 @@ requirements:
     - numpy 1.11.*  # [win and py36]
     - hdf5 1.10.1
     - gsl         # [win]
-    - gsl ==1.16  # [not win]
+    - gsl ==2.2.1  # [not win]
   run:
     - python
     - svgwrite
@@ -49,7 +49,7 @@ requirements:
     - hdf5 1.10.1
     - h5py
     - gsl         # [win]
-    - gsl ==1.16  # [not win]
+    - gsl ==2.2.1  # [not win]
 
 test:
   imports:
