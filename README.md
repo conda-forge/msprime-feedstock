@@ -14,14 +14,16 @@ Coalescent simulator and library for working with succinct tree sequences.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/msprime-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/msprime-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/msprime-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/msprime-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/msprime-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/msprime-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/msprime-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/msprime-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/msprime-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/msprime-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/msprime-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/msprime-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/msprime/badges/version.svg)](https://anaconda.org/conda-forge/msprime)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/msprime/badges/downloads.svg)](https://anaconda.org/conda-forge/msprime)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-msprime-green.svg)](https://anaconda.org/conda-forge/msprime) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msprime.svg)](https://anaconda.org/conda-forge/msprime) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msprime.svg)](https://anaconda.org/conda-forge/msprime) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msprime.svg)](https://anaconda.org/conda-forge/msprime) |
 
 Installing msprime
 ==================
