@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "38037540d2ba90533110522bac3e8a4c8311cdd03310ec8d1aa7fa43a7e15874" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "974c7dac8e30436fab6f1e19d2e0767ff20626893c49bbcc8e0d087ea54b6e3a" %}
 
 package:
   name: {{ name|lower }}
@@ -39,6 +39,7 @@ requirements:
     - six
     - h5py
     - svgwrite
+    - jsonschema
 
 test:
   imports:
