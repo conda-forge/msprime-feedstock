@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
