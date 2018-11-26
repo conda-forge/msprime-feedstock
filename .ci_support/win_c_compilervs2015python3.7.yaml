@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gsl:
-- '2.2'
+- '2.4'
 numpy:
 - '1.11'
 pin_run_as_build:
