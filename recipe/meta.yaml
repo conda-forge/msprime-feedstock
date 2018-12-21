@@ -12,7 +12,7 @@ source:
 
 build:
   number: 1001
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
