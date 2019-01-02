@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1002
+  script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
