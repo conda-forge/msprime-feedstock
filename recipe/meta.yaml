@@ -1,6 +1,7 @@
 {% set name = "msprime" %}
 {% set version = "0.6.2" %}
 {% set sha256 = "05914b4f6cfffd34076b013699f1d39e0fbe892f6f9a5b9831961b9639baadbf" %}
+{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -33,7 +34,9 @@ requirements:
     - numpy
     - gsl
     # Force openblas here to ensure that we use numpy and GSL from conda-forge
-    - openblas  # [unix]
+    # Following the conventions from the scipy feedstock. See below in 'run' also.
+    - blas 1.1 {{ variant }}
+    - openblas  
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -42,7 +45,8 @@ requirements:
     - h5py
     - svgwrite
     - jsonschema
-    - openblas  # [unix]
+    - blas 1.1 {{ variant }}
+    - openblas  
 
 test:
   imports:
