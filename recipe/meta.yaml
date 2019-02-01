@@ -35,8 +35,8 @@ requirements:
     - gsl
     # Force openblas here to ensure that we use numpy and GSL from conda-forge
     # Following the conventions from the scipy feedstock. See below in 'run' also.
-    - blas 1.1 {{ variant }}
-    - openblas  
+    - blas 1.1 {{ variant }}  # [unix]
+    - openblas  # [unix]
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -45,8 +45,8 @@ requirements:
     - h5py
     - svgwrite
     - jsonschema
-    - blas 1.1 {{ variant }}
-    - openblas  
+    - blas 1.1 {{ variant }}  # [unix]
+    - openblas  # [unix]
 
 test:
   imports:
