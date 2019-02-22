@@ -13,7 +13,7 @@ Feedstock license: BSD 3-Clause
 
 Summary: A fast and accurate coalescent simulator.
 
-Coalescent simulator and library for working with succinct tree sequences.
+Reimplementation of Hudson's classical simulator using tskit.
 
 Current build status
 ====================
