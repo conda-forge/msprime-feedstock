@@ -10,9 +10,13 @@ gsl:
 - '2.4'
 numpy:
 - '1.9'
+openblas:
+- 0.3.3
 pin_run_as_build:
   gsl:
     max_pin: x.x
+  openblas:
+    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x

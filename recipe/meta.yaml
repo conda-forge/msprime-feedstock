@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "0.6.2" %}
-{% set sha256 = "05914b4f6cfffd34076b013699f1d39e0fbe892f6f9a5b9831961b9639baadbf" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "38d6849c164cd0ba23dad8fb2e18b84f177030b8658716df9bbaeb4d26981206" %}
 {% set variant = "openblas" %}
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -45,6 +45,7 @@ requirements:
     - h5py
     - svgwrite
     - jsonschema
+    - tskit
     - blas 1.1 {{ variant }}  # [unix]
     - openblas  # [unix]
 
@@ -61,7 +62,7 @@ about:
   license_family: GPL
   license_file: 'LICENSE'
   summary: A fast and accurate coalescent simulator.
-  description: Coalescent simulator and library for working with succinct tree sequences.
+  description: Reimplementation of Hudson's classical simulator using tskit.
   doc_url: 'http://msprime.readthedocs.io/en/stable'
   dev_url: 'https://github.com/jeromekelleher/msprime'
 
