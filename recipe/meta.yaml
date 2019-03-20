@@ -26,16 +26,12 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - libblas
-    - libcblas
     - setuptools
     - setuptools_scm
     - python
     - pip
     - numpy
     - gsl
-    # Force openblas here to ensure that we use numpy and GSL from conda-forge
-    # Following the conventions from the scipy feedstock. See below in 'run' also.
   run:
     - python
     - {{ pin_compatible('numpy') }}
