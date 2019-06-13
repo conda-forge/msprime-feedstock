@@ -11,13 +11,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  # We need C99 and the Windows compilers before py35 won't work.
-  skip: True  # [win and py<35]
+  skip: true  # [py<35]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -28,7 +27,7 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python
+    - python 
     - pip
     - numpy
     - gsl
