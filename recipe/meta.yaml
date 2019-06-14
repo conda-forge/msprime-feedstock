@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "38d6849c164cd0ba23dad8fb2e18b84f177030b8658716df9bbaeb4d26981206" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "fb25cdce78eda7491a1306dd80d67f27fe27fe237faa277f60c3a5aa9ec9c4f0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,13 +11,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  # We need C99 and the Windows compilers before py35 won't work.
-  skip: True  # [win and py<35]
+  # We use this to skip Python2 builds rather than specifying python3 >=3.6 below
+  # as this broke windows builds.
+  skip: true  # [py<35]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -28,7 +29,7 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python
+    - python 
     - pip
     - numpy
     - gsl
