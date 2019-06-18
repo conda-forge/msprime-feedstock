@@ -5,12 +5,10 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gsl:
-- '2.4'
+- '2.5'
 numpy:
 - '1.14'
 pin_run_as_build:
-  gsl:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
