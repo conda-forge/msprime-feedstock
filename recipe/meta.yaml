@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "0.7.4" %}
-{% set sha256 = "cbbee83879444d99c0a79b9cc3688ff74c7c39426d92134d0ccf17a1e15716ba" %}
+{% set version = "1.0.0a5" %}
+{% set sha256 = "35bf05447f8897f16ef45b8be2b39bbae444a170d82c3a9ab135946bc056aaeb" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -29,7 +29,7 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python 
+    - python
     - pip
     - numpy
     - gsl
@@ -55,9 +55,9 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: 'LICENSE'
-  summary: A fast and accurate coalescent simulator.
-  description: Reimplementation of Hudson's classical simulator using tskit.
-  doc_url: 'http://msprime.readthedocs.io/en/stable'
+  summary: Population genetics simulator
+  description: Simulate genealogical trees and genomic sequence data using population genetic models
+  doc_url: 'http://tskit.dev/msprime/docs/stable'
   dev_url: 'https://github.com/jeromekelleher/msprime'
 
 extra:
