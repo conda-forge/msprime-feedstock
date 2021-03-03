@@ -16,9 +16,9 @@ build:
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  # We use this to skip Python2 builds rather than specifying python3 >=3.6 below
+  # We use this to skip Python2 builds rather than specifying python3 >=3.7 below
   # as this broke windows builds.
-  skip: true  # [py<35]
+  skip: true  # [py<37]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -37,10 +37,6 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - gsl
-    - six
-    - h5py
-    - svgwrite
-    - jsonschema
     - tskit
 
 test:
@@ -52,13 +48,13 @@ test:
 
 about:
   home: http://pypi.python.org/pypi/msprime
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: 'LICENSE'
   summary: Population genetics simulator
   description: Simulate genealogical trees and genomic sequence data using population genetic models
   doc_url: 'http://tskit.dev/msprime/docs/stable'
-  dev_url: 'https://github.com/jeromekelleher/msprime'
+  dev_url: 'https://github.com/tskit-dev/msprime'
 
 extra:
   recipe-maintainers:
