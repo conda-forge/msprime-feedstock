@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed --verbose .
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -29,7 +29,7 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python 
+    - python
     - pip
     - numpy
     - gsl
