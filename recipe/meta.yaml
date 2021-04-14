@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "0.7.4" %}
-{% set sha256 = "cbbee83879444d99c0a79b9cc3688ff74c7c39426d92134d0ccf17a1e15716ba" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "2706ceed1ebff67ace67a311534b45ffa8f2bbe09e135aee8aea71e7dde3a03d" %}
 
 package:
   name: {{ name|lower }}
@@ -11,14 +11,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
-  script: python -m pip install --no-deps --ignore-installed --verbose .
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  # We use this to skip Python2 builds rather than specifying python3 >=3.6 below
+  # We use this to skip Python2 builds rather than specifying python3 >=3.7 below
   # as this broke windows builds.
-  skip: true  # [py<35]
+  skip: true  # [py<37]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -37,10 +37,6 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - gsl
-    - six
-    - h5py
-    - svgwrite
-    - jsonschema
     - tskit
 
 test:
@@ -52,13 +48,13 @@ test:
 
 about:
   home: http://pypi.python.org/pypi/msprime
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: 'LICENSE'
-  summary: A fast and accurate coalescent simulator.
-  description: Reimplementation of Hudson's classical simulator using tskit.
-  doc_url: 'http://msprime.readthedocs.io/en/stable'
-  dev_url: 'https://github.com/jeromekelleher/msprime'
+  summary: Population genetics simulator
+  description: Simulate genealogical trees and genomic sequence data using population genetic models
+  doc_url: 'http://tskit.dev/msprime/docs/stable'
+  dev_url: 'https://github.com/tskit-dev/msprime'
 
 extra:
   recipe-maintainers:
