@@ -3,17 +3,17 @@ About msprime
 
 Home: http://pypi.python.org/pypi/msprime
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msprime-feedstock/blob/master/LICENSE.txt)
 
-Summary: A fast and accurate coalescent simulator.
+Summary: Population genetics simulator
 
-Development: https://github.com/jeromekelleher/msprime
+Development: https://github.com/tskit-dev/msprime
 
-Documentation: http://msprime.readthedocs.io/en/stable
+Documentation: http://tskit.dev/msprime/docs/stable
 
-Reimplementation of Hudson's classical simulator using tskit.
+Simulate genealogical trees and genomic sequence data using population genetic models
 
 Current build status
 ====================
@@ -33,13 +33,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_numpy1.17python3.6.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msprime-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.6.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
@@ -61,13 +54,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.17python3.6.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msprime-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.6.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
@@ -86,13 +72,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msprime-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.19python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_numpy1.17python3.6.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4021&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msprime-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.17python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
