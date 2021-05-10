@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "2706ceed1ebff67ace67a311534b45ffa8f2bbe09e135aee8aea71e7dde3a03d" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "75bd228a961ec3f56b15e21a1671d4fa1c1056235f8e04ce1cb1f8ee61c88127" %}
 
 package:
   name: {{ name|lower }}
@@ -50,11 +50,11 @@ about:
   home: http://pypi.python.org/pypi/msprime
   license: GPL-3.0-or-later
   license_family: GPL
-  license_file: 'LICENSE'
+  license_file: LICENSE
   summary: Population genetics simulator
   description: Simulate genealogical trees and genomic sequence data using population genetic models
-  doc_url: 'http://tskit.dev/msprime/docs/stable'
-  dev_url: 'https://github.com/tskit-dev/msprime'
+  doc_url: http://tskit.dev/msprime/docs/stable
+  dev_url: https://github.com/tskit-dev/msprime
 
 extra:
   recipe-maintainers:
