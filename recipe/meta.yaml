@@ -37,7 +37,8 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - gsl
-    - tskit
+    - tskit >=0.3.5
+    - demes <0.2
 
 test:
   imports:
