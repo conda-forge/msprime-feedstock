@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "75bd228a961ec3f56b15e21a1671d4fa1c1056235f8e04ce1cb1f8ee61c88127" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "de06a68675e449440f1c1992e66df7a3e5da65eee7295e2402fb97f26cc50492" %}
 
 package:
   name: {{ name|lower }}
