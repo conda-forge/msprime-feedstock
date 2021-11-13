@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "1.0.2" %}
-{% set sha256 = "de06a68675e449440f1c1992e66df7a3e5da65eee7295e2402fb97f26cc50492" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "72969f2aff4ba425f2ddac7e7507c2e7e48ce64cf0e581c8bae33cd990b90bbf" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mspms=msprime.cli:mspms_main
