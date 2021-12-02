@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -45,7 +45,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - gsl
     - tskit >=0.3.5
-    - demes <0.2
+    - demes >=0.2
 
 test:
   imports:
