@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mspms=msprime.cli:mspms_main
@@ -26,6 +26,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     # Support for osx_arm64 as per
     # https://conda-forge.org/blog/posts/2020-10-29-macos-arm64/#how-to-add-a-osx-arm64-build-to-a-feedstock
     - python                                 # [build_platform != target_platform]
@@ -42,7 +43,6 @@ requirements:
     - gsl
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - gsl
     - tskit >=0.4
     - demes >=0.2
