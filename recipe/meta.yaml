@@ -16,9 +16,7 @@ build:
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  # We use this to skip Python2 builds rather than specifying python3 >=3.7 below
-  # as this broke windows builds.
-  skip: true  # [py<37]
+  skip: true  # [py<39]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
