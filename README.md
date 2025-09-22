@@ -373,4 +373,5 @@ Feedstock Maintainers
 
 * [@benjeffery](https://github.com/benjeffery/)
 * [@jeromekelleher](https://github.com/jeromekelleher/)
+* [@petrelharp](https://github.com/petrelharp/)
 
