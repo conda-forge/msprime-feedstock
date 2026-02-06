@@ -42,7 +42,7 @@ requirements:
   run:
     - python
     - gsl
-    - tskit >=0.4
+    - tskit >=1.0
     - demes >=0.2
 
 test:
