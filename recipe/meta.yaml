@@ -16,7 +16,7 @@ build:
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  skip: true  # [py<39]
+  skip: true  # [py<311]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
