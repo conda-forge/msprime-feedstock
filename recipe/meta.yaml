@@ -1,6 +1,6 @@
 {% set name = "msprime" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "6a409765db3a5d40dcac024a3ae8966698b45050f13fe8e823c8124f750883bf" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "68a7208eaea30ca473365287c833078f654af1e186b24fc0105e7717c93bb967" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   entry_points:
     - mspms=msprime.cli:mspms_main
     - msp=msprime.cli:msp_main
-  skip: true  # [py<39]
+  skip: true  # [py<311]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
