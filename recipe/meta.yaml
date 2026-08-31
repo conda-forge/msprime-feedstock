@@ -1,17 +1,17 @@
 {% set name = "msprime" %}
-{% set version = "1.4.2" %}
-{% set sha256 = "8691b3edf74f9796411627970e6a6cd10ec585c9abf4add42d93e29b3865fd22" %}
+{% set version = "1.4.3" %}
+{% set sha256 = "22f54a2c7c768de386350eccdd4d828018f36f06dab6be7059666bee544f215c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mspms=msprime.cli:mspms_main
